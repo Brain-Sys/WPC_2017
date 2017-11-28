@@ -112,6 +112,9 @@
     <Compile Include="ScannerPage.xaml.cs">
       <DependentUpon>ScannerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WheelPage.xaml.cs">
+      <DependentUpon>WheelPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowsHelloPage.xaml.cs">
       <DependentUpon>WindowsHelloPage.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ScannerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WheelPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
