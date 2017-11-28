@@ -8,27 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Button Content="Start the Game" x:Name="StartGame" Click="StartGame_Click" />
-        
-        <TextBlock Text="Brake" Grid.Row="1" Grid.Column="0" />
-        <TextBlock x:Name="BrakeValue" Grid.Row="1" Grid.Column="1" />
-        
-        <TextBlock Text="Throttle" Grid.Row="2" Grid.Column="0" />
-        <TextBlock x:Name="ThrottleValue" Grid.Row="2" Grid.Column="1" />
-        
-        <TextBlock Text="Angle" Grid.Row="3" Grid.Column="0" />
-        <TextBlock x:Name="AngleValue" Grid.Row="3" Grid.Column="1" />
-        
+        <Button Content="Start the Game" x:Name="StartGame" Click="StartGame_Click" HorizontalAlignment="Center"
+                VerticalAlignment="Top" Margin="16" FontSize="32" />
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="700">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="48" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+
+            <TextBlock Text="Brake" Grid.Row="1" Grid.Column="0" />
+            <TextBlock x:Name="BrakeValue" Grid.Row="1" Grid.Column="1" />
+
+            <TextBlock Text="Throttle" Grid.Row="2" Grid.Column="0" />
+            <TextBlock x:Name="ThrottleValue" Grid.Row="2" Grid.Column="1" />
+
+            <TextBlock Text="Angle" Grid.Row="3" Grid.Column="0" />
+            <TextBlock x:Name="AngleValue" Grid.Row="3" Grid.Column="1" />
+
+        </Grid>
     </Grid>
 </Page>
