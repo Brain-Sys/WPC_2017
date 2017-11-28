@@ -72,11 +72,25 @@ namespace WPC_2017
             Button btn = sender as Button;
             ScannerItem si = btn.DataContext as ScannerItem;
             var folder = ApplicationData.Current.LocalFolder;
-            var myScanner = await ImageScanner.FromIdAsync(si.ScannerHardware.Id);
 
-            if (si.ScannerHardware.IsEnabled)
+            try
             {
-                var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, folder);
+                var myScanner = await ImageScanner.FromIdAsync(si.ScannerHardware.Id);
+
+                if (si.ScannerHardware.IsEnabled)
+                {
+                    var result = await myScanner.ScanFilesToFolderAsync(ImageScannerScanSource.Default, folder);
+                }
+                else
+                {
+                    MessageDialog dlg = new MessageDialog("This scanner is not available, sorry...");
+                    await dlg.ShowAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageDialog dlg = new MessageDialog("This scanner is not available, sorry...");
+                await dlg.ShowAsync();
             }
         }
     }
