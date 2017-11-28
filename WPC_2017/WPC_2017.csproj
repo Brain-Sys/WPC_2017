@@ -98,6 +98,12 @@
     <Compile Include="AutoStartPage.xaml.cs">
       <DependentUpon>AutoStartPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AdviceDialog.xaml.cs">
+      <DependentUpon>AdviceDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Lock.xaml.cs">
+      <DependentUpon>Lock.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OcrPage.xaml.cs">
       <DependentUpon>OcrPage.xaml</DependentUpon>
     </Compile>
@@ -105,6 +111,9 @@
     <Compile Include="ScannerItem.cs" />
     <Compile Include="ScannerPage.xaml.cs">
       <DependentUpon>ScannerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsHelloPage.xaml.cs">
+      <DependentUpon>WindowsHelloPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WordOverlay.cs" />
   </ItemGroup>
@@ -115,6 +124,7 @@
     <None Include="WPC_2017_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Background.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -140,11 +150,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\AdviceDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Lock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="OcrPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ScannerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsHelloPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
