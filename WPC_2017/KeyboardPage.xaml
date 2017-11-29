@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="WPC_2017.KeyboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WPC_2017"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="16">
+            <Button Content="Button 1" Margin="8" x:Name="Button1">
+                <Button.KeyboardAccelerators>
+                    <KeyboardAccelerator ScopeOwner="{Binding ElementName=Button1}" Invoked="KeyboardAccelerator_Invoked"
+                                         Modifiers="None" Key="F1" />
+                </Button.KeyboardAccelerators>
+            </Button>
+            <Button Content="Button 2" Margin="8" />
+            <Button Content="Button 3" Margin="8" />
+            <Button Content="Button 4" Margin="8" />
+            <Button Content="Button 5" Margin="8" />
+        </StackPanel>
+        <Grid.KeyboardAccelerators>
+            
+        </Grid.KeyboardAccelerators>
+    </Grid>
+
+    <Page.TopAppBar>
+        <CommandBar AccessKey="M">
+            <AppBarButton 
+    Icon="Share" 
+    Label="Share" 
+    Click="AppBarButton_Click"
+    AccessKey="S" />
+            <AppBarButton 
+    Icon="Copy" 
+    Label="Copy" 
+    ToolTipService.ToolTip="Copy (Ctrl+C)" 
+    Click="AppBarButton_Click_1"
+    AccessKey="C">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator 
+        Modifiers="Control" 
+        Key="C" />
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+
+            <AppBarButton 
+    Icon="Delete" 
+    Label="Delete" 
+    Click="AppBarButton_Click_2"
+    AccessKey="D" />
+            <AppBarSeparator/>
+            <AppBarButton 
+    Icon="Rename" 
+    Label="Rename" 
+    ToolTipService.ToolTip="Rename (F2)" 
+    Click="AppBarButton_Click_3"
+    AccessKey="R">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator 
+        Modifiers="None" Key="F2" />
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+
+            <AppBarButton 
+    Icon="SelectAll" 
+    Label="Select" 
+    Click="AppBarButton_Click_4"
+    AccessKey="A" />
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton 
+      Icon="OpenWith" 
+      Label="Sources" 
+      AccessKey="S">
+                    <AppBarButton.Flyout>
+                        <MenuFlyout>
+                            <ToggleMenuFlyoutItem Text="OneDrive" />
+                            <ToggleMenuFlyoutItem Text="Contacts" />
+                            <ToggleMenuFlyoutItem Text="Photos"/>
+                            <ToggleMenuFlyoutItem Text="Videos"/>
+                        </MenuFlyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
+                <AppBarToggleButton 
+      Icon="Save" 
+      Label="Auto Save" 
+      IsChecked="True" 
+      AccessKey="A"/>
+            </CommandBar.SecondaryCommands>
+
+        </CommandBar>
+    </Page.TopAppBar>
+    
+</Page>

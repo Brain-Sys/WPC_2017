@@ -74,7 +74,8 @@ namespace WPC_2017
                     //rootFrame.Navigate(typeof(AutoStartPage), e.Arguments);
                     //rootFrame.Navigate(typeof(OcrPage), e.Arguments);
                     //rootFrame.Navigate(typeof(WindowsHelloPage), e.Arguments);
-                    rootFrame.Navigate(typeof(WheelPage), e.Arguments);
+                    //rootFrame.Navigate(typeof(WheelPage), e.Arguments);
+                    rootFrame.Navigate(typeof(KeyboardPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
